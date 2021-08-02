@@ -1,0 +1,122 @@
+<!doctype html>
+<!--Autor:AntonioJesus Zafra Arias -->
+<!--PRACTICA SITIOS TURÍSTICOS DE CORDOBA -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Turismo Cordoba</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <!--FUENTES DE GOOGLE -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+    <!--ENLAZAMOS EL JAVASCRIPT -->
+    <script type="text/javascript" src="funciones/funciones.js"></script>
+    <link rel="icon" href="media/imagenes/favicon.png" 16px>
+</head>
+
+<body>
+    <!--INTRODUCIMOS AL PRINCIPIO ESTE DIV QUE POSTERIORMENTE LE INSERTAREMOS LA IMAGEN CON EL EFECTO PARALLAX -->
+    <div class="parallax animated  slideInUp  delay-0s"></div>
+
+    <!--CONTENEDOR PRINCIPAL -->
+    <div id="contenedor_principal">
+
+        <!--<header class="animated  zoomInUp  delay-0s">
+            <div id="slider">
+                <img id="imagen_titulo" src="media/imagenes/slider-cordoba-letras.png" height="150px" width="100%">
+            </div>
+        </header>-->
+
+
+        <div id="contenido" class="animated  fadeInDown  delay-1s">
+            <div id="video">
+                <!--TITULO PRINCIPAL, QUE CON JS LO INTERCAMBIAREMOS DINÁMICAMENTE -->
+                <h1 id="titulo">Bienvenidos a Córdoba</h1>
+                <!--VIDEO PRINCIPAL, QUE CON JS LO INTERCAMBIAREMOS DINÁMICAMENTE -->
+                <video id="video_principal" controls autoplay src="media/videos/principal.mp4" width="75%" poster="media/imagenes/slider_cordoba_2.jpg">
+                </video>
+                <!--ESTE DIV CONTIENE LA INFORMACION DEL SITIO DE INTERÉS TURÍSTICO
+                    SE INTERCAMBIARÁ DINÁMICAMENTE CON JS-->
+                <p id="informacion">Córdoba es una ciudad del sur de la región de Andalucía, en España, y es la capital de la provincia de Córdoba. Fue una importante ciudad romana y uno de los principales centros islámicos de la Edad Media. Es conocida por la enorme Mezquita que data del año 784 d. C., con un salón de oración con columnas y antiguos mosaicos bizantinos.</p>
+
+
+            </div>
+            <!--INSERTAMOS EL CUADRO CON LAS MINUATURAS DE LOS VIDEOS -->
+            <div id="miniaturas">
+                <h1 id="titulo_2">Lugares de Interés</h1>
+
+                <!--PUENTE ROMANO DE CORDOBA -->
+                <div class="video_miniatura">
+                    <video autoplay src="media/videos/puente_romano.mp4" #t=90 width="80%" poster="media/imagenes/poster_puente_romano.jpg" controls>
+                    </video>
+                    <button class="animated  zoomInUp  delay-2s " onclick="cambiar_datos(1)" value="Patio">Puente Romano</button>
+                </div>
+
+                <!--ALCÁZAR DE CÓRDOBA -->
+                <div class="video_miniatura">
+                    <video autoplay src="media/videos/alcazar.mp4" width="80%" poster="media/imagenes/poster_alcazar.jpg" controls>
+                    </video>
+                    <button class="animated  zoomInUp  delay-2s " onclick="cambiar_datos(2)" value="Patio">Alcázar</button>
+                </div>
+
+                <!--TORRE DE LA CALAHORRA -->
+                <div class="video_miniatura">
+                    <video autoplay src="media/videos/calahorra.mp4" width="80%" poster="media/imagenes/poster_calahorra.png" controls>
+                    </video>
+                    <button class="animated  zoomInUp  delay-2s " onclick="cambiar_datos(3)" value="Patio">Torre de la Calahorra</button>
+                </div>
+
+                <!--MEZQUITA DE CÓRDOBA-->
+                <div class="video_miniatura">
+                    <video autoplay src="media/videos/mezquita.mp4" width="80%" poster="media/imagenes/poster_mezquita.jpg" controls>
+                    </video>
+                    <button class="animated  zoomInUp  delay-2s " onclick="cambiar_datos(4)" value="Patio">Mezquita de Córdoba</button>
+                </div>
+
+
+                <!--PATIO DE LOS NARANJOS-->
+                <div class="video_miniatura">
+                    <video autoplay src="media/videos/patios.mp4" width="80%" poster="media/imagenes/poster_patio.jpg" controls>
+                    </video>
+
+                    <button class="animated  zoomInUp  delay-2s " onclick="cambiar_datos(5)" value="Patio">Patio de los Naranjos</button>
+                </div>
+
+
+
+            </div>
+
+            <!--ESTE DIV CONTIENE:
+                BOTÓN VISITAS GUIADA, QUE CONTIENE UN ENLAZE A UNA PAGINA DONDE HAY VARIAS POR LA CIUDAD
+
+                BOTÓN COMO LLEGAR, QUE DESPLEGARA EN LA PARTE DE ABAJO UN MAPA QUE CAMBIARÁ DINAMICAMENTE
+                DE DIRECCION, SEGUN QUE MONUMENTO SE SELECCIONE-->
+            <div id="visitas_guiadas">
+                <a id="texto_visitas_guiadas" href="https://www.civitatis.com/es/cordoba/" target="blank">Visitas Guiadas</a>
+                <br>
+                <br>
+                <a id="texto_visitas_guiadas" onclick="mostrar_mapa()" target="blank">¿Cómo llegar?</a>
+
+            </div>
+            <br><br><br>
+            <!--ESTE ES EL IFRAME QUE CONTIENE EL MAPA -->
+            <iframe id="mapa" src="" width="90%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+        </div>
+
+        <!--PIE DE PÁGINA -->
+        <footer>
+            <div id="pie" class="animated  zoomInDown  delay-0s">
+                <small>Designed By Antonio Zafra &copy; 2019</small>
+
+            </div>
+        </footer>
+
+
+
+    </div>
+    <!--FIN CONTENEDOR PRINCIPAL -->
+</body>
+
+</html>

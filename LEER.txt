@@ -1,0 +1,9 @@
+WEB TURÍSTICA DE LA PROVINCIA DE CORDOBA
+Hemos realizado un sitio web indicado para turístas oque estén por córdoba, o cualquier persona que quiera ver algunos de los monumentos más importante de la ciudad.
+De primeras, podrán visualizar un video intoductorio sobre la provincia, y a la derecha tenemos 5 de los monumentos mas improtantes de la provincia: Puente Romano,Alcázar,Torre de la Calahorra,Mezquita de Córdoba y Patio de los Naranjos.
+Se puede interactuar con cada uno de estos monumentos, al hacer click, no abrirá un video sobre el monumento, direecion de como llegar y demás
+Funciones:
+CambiarDatos(numero):Esta función cambia de manera dinámica el titulo, video y descripción sobre el monumento que hayamos hecho click
+MostrarBoton():Solo al hacer click sobre un monumento, se nos desplegara un recuadro con dos botones nuevos Visitas Guiadas.¿Cómo llegar?
+Mostrar_Mapa():Cuando el usuario hace click sobre ¿Cómo llegar?, automáticamente se desplegará un mapa en nuestro sitio web indicandonos como llegar hasta nuestro destino;
+Cambiar_Mapa():Antes de terminar la función mostrar_mapa(), llamamos a esta funcion para que cambie dinámicamente la ruta a seguir, dependiendo del monumento que hayamos seleccionado.
